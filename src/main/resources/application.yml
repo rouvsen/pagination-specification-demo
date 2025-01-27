@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: pagination-specification-demo
+  datasource:
+    url: jdbc:postgresql://localhost:5432/advanced_pagination_db
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true #PostgreSQL specific setting, prevents warnings about createClob() method not being implemented
+        format_sql: true
+    show-sql: true
