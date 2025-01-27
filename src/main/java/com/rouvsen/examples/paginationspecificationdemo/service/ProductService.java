@@ -72,7 +72,7 @@ public class ProductService {
             }
         } else {
             // No cursor provided, fetch the first page
-            products = productRepository.findAll(spec, pageable.getSort()).stream().toList();
+            products = productRepository.findAll(spec, pageable).stream().toList();
         }
 
         // Determine if there's a next page
